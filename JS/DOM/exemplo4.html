@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 4</title>
+</head>
+<body>
+    
+    <ul>
+
+    </ul>
+
+    <ul id='produtos'>
+
+    </ul>
+</body>
+
+<script>
+
+    // incluindo elemento na div
+
+    const elemento = document.createElement('div')
+    elemento.innerText = 'incluíndo texto na div'
+    elemento.style.backgroundColor = 'lightgreen'
+    document.body.append(elemento)
+
+    let lista = document.querySelector('ul')
+    let num = Number.parseInt(prompt('Digite um número: '))
+
+    for(let i = 0; i < num; i++ ){
+        let li = document.createElement('li')
+        li.textContent = (i + 1) +'º opção da lista'
+        li.style.borderBottom = '2px solid red'
+        lista.append(li)
+    }
+
+    const produtos = ["Macarrão", "Arroz", "Cenoura", "Carne Moida", "Batata Doce"]
+    const listaProd = document.getElementById('produtos')
+
+    produtos.forEach( produto => {
+        let li = document.createElement('li')
+        li.textContent = produto
+        listaProd.append(li)
+    })
+    
+
+
+</script>
+</html>

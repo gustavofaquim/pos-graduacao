@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 5</title>
+</head>
+<body>
+    <button onclick="exemplo()">Aperta aqui</button>
+    <h1 id="exemplo" onmouseover="mousePorCima()" onmouseout="tirarMouse()">Troca de Texto</h1>
+</body>
+
+<script>
+    function exemplo(){
+        alert('mostrando o alert')
+    }
+
+    function mousePorCima(){
+        document.getElementById('exemplo').innerHTML = 'Evento com mouse over'
+    }
+
+    function tirarMouse(){
+        document.getElementById('exemplo').innerHTML = 'Troca de Texto'
+    }
+</script>
+</html>
